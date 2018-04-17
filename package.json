@@ -1,8 +1,8 @@
 {
-  "name": "my-component",
+  "name": "st-components",
   "version": "0.0.1",
-  "description": "Stencil Component Starter",
-  "main": "dist/mycomponent.js",
+  "description": " A reusable, expandable and customizable set of web-components made within Stencil.js ",
+  "main": "dist/st-components.js",
   "types": "dist/types/components.d.ts",
   "collection": "dist/collection/collection-manifest.json",
   "files": [
@@ -27,12 +27,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ionic-team/stencil-component-starter.git"
+    "url": "git+https://github.com/cfguimaraes/st-components"
   },
-  "author": "Ionic Team",
-  "license": "MIT",
+  "author": "Cleverton Fernandes Guimarães",
   "bugs": {
-    "url": "https://github.com/ionic-team/stencil"
+    "url": "https://github.com/cfguimaraes/st-components/issues"
   },
   "homepage": "https://github.com/ionic-team/stencil",
   "jest": {

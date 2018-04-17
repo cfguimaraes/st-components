@@ -1,15 +1,59 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
   <title>Stencil Component Starter</title>
-  <script src="/build/mycomponent.js"></script>
+  <link rel="stylesheet" href="build/st-components.css">
+  <script src="/build/st-components.js"></script>
 
 </head>
+
 <body>
 
-  <my-component first="Stencil" last="'Don't call me a framework' JS"></my-component>
+
+  <script>
+    let classes = [
+      "alert",
+      "complementary",
+      "danger",
+      "dark",
+      "info",
+      "light",
+      "primary",
+      "secondary",
+      "shadow",
+    ]
+
+    let b = document.querySelector("body");
+    classes.forEach(c => {
+      var el = document.createElement("button");
+      el.className = "outlined " + c;
+      el.innerText = c;
+      b.appendChild(el);
+
+      var el = document.createElement("button");
+      el.className = "outlined hover " + c;
+      el.innerText = c;
+      b.appendChild(el);
+
+      el = document.createElement("button");
+      el.className = "solid " + c;
+      el.innerText = c;
+      b.appendChild(el);
+
+
+      el = document.createElement("button");
+      el.className = "solid hover " + c;
+      el.innerText = c;
+      b.appendChild(el);
+
+      b.appendChild(document.createElement("br"));
+    });
+
+  </script>
 
 </body>
-</html>
+
+</html

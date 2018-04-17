@@ -1,0 +1,56 @@
+@function color($color) {
+  @if map-has-key($map: $colors, $key: $color) {
+    @return map-get($map: $colors, $key: $color);
+  }
+  @warn "The color `#{$color}` was not found in `$colors` array \
+    Using `#{$color}` as fallback value";
+  @return $color;
+}
+
+@function check-color-lightness-and-return-light-or-dark($color) {
+  @if map-has-key($map: $colors, $key: $color) {
+    $c: map-get($map: $colors, $key: $color);
+    $l: lightness($c);
+
+    @if $l <= 30% {
+      @return map-get($map: $colors, $key: light);
+    } @else {
+      @return map-get($map: $colors, $key: dark);
+    }
+  }
+  @error "Color `#{$color}` does not exists in `$colors` map";
+}
+
+button.outlined {
+  background-color: color(light);
+}
+
+@each $item, $value in $colors {
+  @keyframes outline-hover-#{$item} {
+    from {
+      background-color: color(light);
+    }
+    to {
+      background-color: color($item);
+    }
+  }
+
+  button.#{$item} {
+    border: 1px solid color($item);
+  }
+  button.#{$item}.hover:hover {
+    background-color: color($item);
+    color: check-color-lightness-and-return-light-or-dark($item);
+    animation-name: outline-hover-#{$item};
+    animation-duration : 2s;
+  }
+
+  button.outlined.#{$item} {
+    color: color(dark);
+  }
+
+  button.solid.#{$item} {
+    background-color: color($item);
+    color: check-color-lightness-and-return-light-or-dark($item);
+  }
+}
