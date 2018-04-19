@@ -1,11 +1,36 @@
-@each $item, $value in $spacing {
-  .spacing-#{$item} {
+@each $size, $value in $spacing {
+  .spacing-#{$size} {
     padding: $value;
     margin: $value;
   }
 
-  .spacing-childs-#{$item} *{
+  .margin-#{$size} {
+    margin: $value;
+  }
+
+  .padding-#{$size} {
+    padding: $value;
+  }
+
+  .spacing-childs-#{$size} * {
     padding: $value;
     margin: $value;
   }
+
+  @each $direction in top, right, bottom, left {
+    .spacing-#{$direction}-#{$size} {
+      padding-#{$direction}: $value;
+      margin-#{$direction}: $value;
+    }
+
+    .margin-#{$direction}-#{$size} {
+      margin-#{$direction}: $value;
+    }
+
+    .padding-#{$direction}-#{$size} {
+      padding-#{$direction}: $value;
+    }
+  }
+
+  
 }
