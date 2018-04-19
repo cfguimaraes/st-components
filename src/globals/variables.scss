@@ -1,18 +1,16 @@
 $colors: (
-  alert: yellow,
-  complementary: #00a8e8,
-  danger: red,
-  dark: #00171f,
-  info: #51acd6,
-  light: #fff,
-  primary: #003459,
-  secondary: #007ea7,
-  shadow : rgba(0,0,0,0.25)
+  alert: yellow, // Primary used to warn a user about something
+  background-color: rgba(0, 0, 255, 0.05), // Used to paint the background of the page
+  complementary: #00a8e8, // To diferentiate primary actions from secondary or less importants
+  danger: red, // In case this is a dangerous action or want attention from the user
+  dark: #00171f, // Used to color text an some elements inside others
+  info: #51acd6, // Primary used to inform a user about an state or feedback about some action
+  light: #fff, // Used to outline itens, be the canvas to other itens upside this
+  primary: #003459, // Primary actions across the app, to mantain coherence.
+  secondary: #007ea7, // Important action but less important than primary
+  shadow : rgba(0,0,0,0.25) // Be the shadow color of box components & hoverables
 );
 
-$styles : (
-  outlined,
-  filled,
-  solid,
-  flat
-)
+$transition-duration: 0.3s;
+
+$darken-proportion: 10%;

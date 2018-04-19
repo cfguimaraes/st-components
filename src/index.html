@@ -12,6 +12,8 @@
 
 <body>
 
+<button>aslkj</button>
+<br>
 
   <script>
     let classes = [
@@ -28,13 +30,25 @@
 
     let b = document.querySelector("body");
     classes.forEach(c => {
+      
+      var el = document.createElement("button");
+      el.className = "minimalist " + c;
+      el.innerText = c;
+      b.appendChild(el);
+
+      var el = document.createElement("button");
+      el.className = "minimalist hoverable " + c;
+      el.innerText = c;
+      b.appendChild(el);
+      
+      
       var el = document.createElement("button");
       el.className = "outlined " + c;
       el.innerText = c;
       b.appendChild(el);
 
       var el = document.createElement("button");
-      el.className = "outlined hover " + c;
+      el.className = "outlined hoverable " + c;
       el.innerText = c;
       b.appendChild(el);
 
@@ -45,7 +59,7 @@
 
 
       el = document.createElement("button");
-      el.className = "solid hover " + c;
+      el.className = "solid hoverable " + c;
       el.innerText = c;
       b.appendChild(el);
 

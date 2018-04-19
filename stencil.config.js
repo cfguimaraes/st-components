@@ -5,7 +5,10 @@ exports.config = {
   globalStyle: ["src/globals/styles.scss"],
   plugins: [
     sass({
-      injectGlobalPaths: ["./src/globals/variables.scss"]
+      injectGlobalPaths: [
+        "./src/globals/variables.scss",
+        "./src/globals/functions.scss"
+    ]
     })
   ],
 
