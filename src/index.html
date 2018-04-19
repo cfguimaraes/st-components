@@ -12,8 +12,16 @@
 
 <body>
 
-<button>aslkj</button>
-<br>
+  <button class="outlined primary border-a">border-a</button>
+  <button class="minimalist border-e">border-e</button>
+  <button class="solid complementary text-light border-i">border-i</button>
+  <button class="outlined danger border-o text-dark">border-o</button>
+  <button class="border-u">border-u</button>
+  <button class="border-circle">a</button>
+  <button class="border-max">border-max</button>
+
+
+  <br>
 
   <script>
     let classes = [
@@ -30,7 +38,9 @@
 
     let b = document.querySelector("body");
     classes.forEach(c => {
+ 
       
+
       var el = document.createElement("button");
       el.className = "minimalist " + c;
       el.innerText = c;
@@ -40,8 +50,8 @@
       el.className = "minimalist hoverable " + c;
       el.innerText = c;
       b.appendChild(el);
-      
-      
+
+
       var el = document.createElement("button");
       el.className = "outlined " + c;
       el.innerText = c;

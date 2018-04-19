@@ -1,3 +1,14 @@
+$borders : (
+  zero : 0,  
+  a : 2px,
+  e : 4px,
+  i : 8px,
+  o : 16px,
+  u : 32px,
+  circle : 50%,
+  max : 100%,
+);
+
 $colors: (
   alert: yellow, // Primary used to warn a user about something
   background-color: rgba(0, 0, 255, 0.05), // Used to paint the background of the page
@@ -9,8 +20,15 @@ $colors: (
   primary: #003459, // Primary actions across the app, to mantain coherence.
   secondary: #007ea7, // Important action but less important than primary
   shadow : rgba(0,0,0,0.25) // Be the shadow color of box components & hoverables
+  );
+  
+  $grid :(
+  a : 4px,
+  e : 8px,
+  i : 12px,
+  o : 16px,
+  u : 24px
 );
 
-$transition-duration: 0.3s;
-
 $darken-proportion: 10%;
+$transition-duration: 0.3s;
