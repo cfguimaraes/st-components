@@ -8,43 +8,7 @@
 // flat
 
 button {
-  $b: map-get($map: $borders, $key: e);
-  padding: $b;
-  margin:  $b;
-}
-
-button.outlined {
-  background-color: inherit;
-}
-
-@each $item, $value in $colors {
-  button.#{$item} {
-    transition:
-      background-color $transition-duration,
-      border $transition-duration,
-      color $transition-duration;
-    transition-timing-function: ease-in-out;
-  }
-
-  button.minimalist{
-    border: 0;
-    background-color: inherit;
-  }
-
-  button.outlined.#{$item} {
-    $c: retrieve-color-from-variables(dark);
-    border: 1px solid $value;
-  }
-
-  button.solid.#{$item} {
-    background-color: $value;
-    border: 1px solid $value;
-  }
-
-  button.#{$item}.hoverable:hover {
-    $d: darken-color-based-on-lightness($item);
-    background-color: $d;
-    border-color: $d;
-    color : check-color-lightness-and-return-light-or-dark($item);
-  }
+  transition: background-color $transition-duration, border $transition-duration,
+    color $transition-duration;
+  transition-timing-function: ease-in-out;
 }

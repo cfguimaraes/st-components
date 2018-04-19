@@ -1,11 +1,15 @@
 @function check-color-lightness-and-return-light-or-dark($color) {
-/**
+  /**
     To mantain the coherence across color in the app.
     Return dark or light color based on lightness of a color
     based on variables color.
 
 */
   @if map-has-key($map: $colors, $key: $color) {
+    @if $color == inherit {
+      @return inherit;
+    }
+
     $c: map-get($map: $colors, $key: $color);
     $l: lightness($c);
 
@@ -19,10 +23,14 @@
 }
 
 @function retrieve-color-from-variables($color) {
-/**
+  /**
     Provide a secure way to access variable.
     If these does not exists will warn the dev and use the color as fallback
 */
+
+  @if $color == inherit {
+    @return inherit;
+  }
   @if map-has-key($map: $colors, $key: $color) {
     @return map-get($map: $colors, $key: $color);
   }
@@ -32,17 +40,21 @@
 }
 
 @function darken-color-based-on-lightness($color) {
-/**
+  /**
     Centralized way to control color from $colors variable.
 */
   @if map-has-key($map: $colors, $key: $color) {
+    @if $color == inherit {
+      @return inherit;
+    }
+
     $c: map-get($map: $colors, $key: $color);
     $l: lightness($c);
     @if $l <10% {
-        @return darken($c, 4%);
+      @return darken($c, 4%);
     }
     @if $l <20% {
-        @return darken($c, 5%);
+      @return darken($c, 5%);
     }
     @return darken($c, 10%);
   }

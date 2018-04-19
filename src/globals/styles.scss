@@ -1,6 +1,10 @@
 @import "./../styles/button";
 @import "./../styles/border";
 @import "./../styles/text";
+@import "./../styles/grid";
+@import "./../styles/background";
+@import "./../styles/hoverable";
+
 
 html {
   background-color: map-get($map: $colors, $key: background-color);

@@ -1,12 +1,12 @@
-$borders : (
-  zero : 0,  
+$spacing : (
+  0 : 0,  
   a : 2px,
   e : 4px,
   i : 8px,
   o : 16px,
   u : 32px,
-  circle : 50%,
-  max : 100%,
+  half : 50%,
+  full : 100%,
 );
 
 $colors: (
@@ -16,6 +16,7 @@ $colors: (
   danger: red, // In case this is a dangerous action or want attention from the user
   dark: #00171f, // Used to color text an some elements inside others
   info: #51acd6, // Primary used to inform a user about an state or feedback about some action
+  inherit: inherit,
   light: #fff, // Used to outline itens, be the canvas to other itens upside this
   primary: #003459, // Primary actions across the app, to mantain coherence.
   secondary: #007ea7, // Important action but less important than primary

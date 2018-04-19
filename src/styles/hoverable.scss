@@ -1,0 +1,9 @@
+@each $item, $value in $colors {
+    .hoverable-#{$item}:hover {
+      $d: darken-color-based-on-lightness($item);
+      background-color: $d;
+      border-color: $d;
+      color: check-color-lightness-and-return-light-or-dark($item);
+    }
+  }
+  

@@ -10,73 +10,34 @@
 
 </head>
 
-<body>
+<body class="spacing-childs-e">
 
-  <button class="outlined primary border-a">border-a</button>
-  <button class="minimalist border-e">border-e</button>
-  <button class="solid complementary text-light border-i">border-i</button>
-  <button class="outlined danger border-o text-dark">border-o</button>
-  <button class="border-u">border-u</button>
-  <button class="border-circle">a</button>
-  <button class="border-max">border-max</button>
+    <button class="border-0 border-primary background-inherit">minimalist</button>
+    <button class="border-0 hoverable-danger border-primary background-inherit">minimalist</button>
+    <button class="border-a background-inherit border-alert text-shadow">outline</button>
+    <button class="border-a hoverable-complementary background-inherit border-alert text-shadow">outline</button>
+    <button class="border-a background-primary border-primary text-light">solid</button>
+    <button class="border-a hoverable-primary background-complementary border-primary text-light">solid</button>
+
 
 
   <br>
 
   <script>
     let classes = [
-      "alert",
-      "complementary",
-      "danger",
-      "dark",
-      "info",
-      "light",
-      "primary",
-      "secondary",
-      "shadow",
+    "alert",
+    "background-color",
+    "complementary",
+    "danger",
+    "dark",
+    "info",
+    "inherit",
+    "light",
+    "primary",
+    "secondary",
+    "shadow"
     ]
-
-    let b = document.querySelector("body");
-    classes.forEach(c => {
- 
-      
-
-      var el = document.createElement("button");
-      el.className = "minimalist " + c;
-      el.innerText = c;
-      b.appendChild(el);
-
-      var el = document.createElement("button");
-      el.className = "minimalist hoverable " + c;
-      el.innerText = c;
-      b.appendChild(el);
-
-
-      var el = document.createElement("button");
-      el.className = "outlined " + c;
-      el.innerText = c;
-      b.appendChild(el);
-
-      var el = document.createElement("button");
-      el.className = "outlined hoverable " + c;
-      el.innerText = c;
-      b.appendChild(el);
-
-      el = document.createElement("button");
-      el.className = "solid " + c;
-      el.innerText = c;
-      b.appendChild(el);
-
-
-      el = document.createElement("button");
-      el.className = "solid hoverable " + c;
-      el.innerText = c;
-      b.appendChild(el);
-
-      b.appendChild(document.createElement("br"));
-    });
-
-  </script>
+</script>
 
 </body>
 

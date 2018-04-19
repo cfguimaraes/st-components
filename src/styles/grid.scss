@@ -1,0 +1,11 @@
+@each $item, $value in $spacing {
+  .spacing-#{$item} {
+    padding: $value;
+    margin: $value;
+  }
+
+  .spacing-childs-#{$item} *{
+    padding: $value;
+    margin: $value;
+  }
+}

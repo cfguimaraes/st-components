@@ -1,0 +1,15 @@
+@each $item, $value in $spacing {
+  .rounded-#{$item} {
+    border-radius: $value;
+  }
+
+  .border-#{$item} {
+    border: $value solid;
+  }
+}
+
+@each $item, $value in $colors {
+  .border-#{$item} {
+    border-color: $value;
+  }
+}
