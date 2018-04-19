@@ -8,7 +8,6 @@
 // flat
 
 button {
-  transition: background-color $transition-duration, border $transition-duration,
-    color $transition-duration;
+  transition: $transition-properties;
   transition-timing-function: ease-in-out;
 }

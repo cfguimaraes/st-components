@@ -1,0 +1,9 @@
+@each $item, $value in $colors {
+  .shadowed-#{$item} {
+    box-shadow: 0 0 8px $value;
+  }
+
+  .shadowed-#{$item}-hover:hover {
+    box-shadow: 0 3px 8px $value;
+  }
+}
