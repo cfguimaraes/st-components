@@ -11,9 +11,3 @@
 html {
   background-color: map-get($map: $colors, $key: background-color);
 }
-
-* {
-  color: black;
-  margin : 0;
-  padding : 0;
-}

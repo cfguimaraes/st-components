@@ -7,7 +7,7 @@
 // filled,
 // flat
 
-button {
+button[class*="hoverable"] {
   transition: $transition-properties;
   transition-timing-function: ease-in-out;
 }

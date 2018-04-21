@@ -32,5 +32,15 @@
     }
   }
 
-  
+  /* Sizes
+
+  */
+  .text-#{$size} {
+    font-size: $value;
+  }
+
+  button.size-#{$size} {
+    padding: $value;
+    line-height: $value;
+  }
 }
